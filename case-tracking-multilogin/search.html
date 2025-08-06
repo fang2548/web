@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ค้นหาติดตามสถานะคดี</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="search-box">
+    <h2>ค้นหาติดตามสถานะคดี</h2>
+   
+    </select>
+    
+    <input type="text" id="caseNumber" placeholder="กรอกเลขคดี เช่น 123/2566">
+    <button onclick="searchCase()">ค้นหา</button>
+  </div>
+
+  <script>
+    function searchCase() {
+      const type = document.getElementById("caseType").value;
+      const number = document.getElementById("caseNumber").value;
+      if (number.trim() === "") {
+        alert("กรุณากรอกเลขคดี");
+        return;
+      }
+      alert("กำลังค้นหา: คดี" + type + " เลขที่ " + number);
+    }
+  </script>
+</body>
+</html>
